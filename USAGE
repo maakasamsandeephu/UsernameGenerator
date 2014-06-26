@@ -1,0 +1,34 @@
+USAGE:
+root@ninja:/tools/git/UsernameGenerator# python user-gen.py 
+Target UserName Generator  ( TUG )  v06
+  
+usage:  user-gen.py names.txt -FLAG [@email.com]
+        
+ GENERATE LIST WITHOUT EMAIL
+ -lnfn  is  LastnameFirstname  -- DoeJohn
+ -fnln  is FirstnameLastname  -- JohnDoe
+ -filn  is FirstinitialLastname -- JDoe
+ -lifn  is LastinitialFirstname -- DJohn 
+ -fdl   is firstname DOT lastname -- John.Doe 
+ -ldf   is lastname DOT firstname -- Doe.John 
+ -ful   is firstname _ lastname -- John_Doe 
+ -luf   is lastname _ firstname -- Doe_John 
+ -all   prints all combinations -- ALL 
+  
+example:  user-gen.py names.txt -FLAG
+    
+ GENERATE LIST WITH EMAIL  
+-lnfn_email   is LastNameFirstname@acme.com -- doejohn@acme.com
+-fnln_email   is FirstNameLastName@acme.com -- johndoe@acme.com
+-filn_email   is FirstInitialLastname@acme.com  -- jdoe@acme.com
+-lifn_email   is LastInitialFirstname@acme.com  -- djohn@acme.com
+-fdl_email    is Firstname DOT Lastname@acme.com --  john.doe@acme.com
+-ldf_email    is Lastname DOT Firstname@acme.com -- doe.john@acme.com
+-ful_email    is Firstname_Lastname@acme.com  --  john_doe@acme.com
+-luf_email    is Lastname_firstname@acme.com  --  doe_john@acme.com 
+-all_email    is ALL NAMING CONVENTIONS @acme.com ---- 
+  
+example  user-gen.py names.txt -FLAG_email @acme.com
+   
+NOTE: Input text file should be in 'firstname lastname' format. Only tested on linux text files.
+
